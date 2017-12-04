@@ -15,13 +15,13 @@ Sketch of final product:  https://wireframe.cc/650SEu
 * **Andre' Jarboe II** - *Initial work* - [AndreJarboe](https://github.com/andrejarboe)
 
 
-## API’s to be used:
+### API’s to be used:
 
 * CoinMap
 * Yelp!
 * GoogleMaps
 
-Rough breakdown of tasks:
+### Rough breakdown of tasks:
 
 *	Make UI
 *	Define location: lat & long
