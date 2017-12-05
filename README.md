@@ -1,13 +1,13 @@
 # WeCoin
 
-## Project description:
+### Project description:
 
 Create an application that identifies merchants near the user or a selected location that accepts bitcoin.  Provide Yelp reviews for the selected merchants.
 
 
 Sketch of final product:  https://wireframe.cc/650SEu
 
-## Authors
+### Authors
 
 * **Shaheena Quresh** - *Initial work* - [Shaheenaq](https://github.com/shaheenaq)
 * **Peter Perreiah** - *Initial work* - [Pperreiah](https://github.com/pperreiah)
