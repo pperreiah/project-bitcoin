@@ -7,6 +7,8 @@ Create an application that identifies merchants near the user or a selected loca
 
 Sketch of final product:  https://wireframe.cc/650SEu
 
+To view it live, **[click here](https://pperreiah.github.io/project-bitcoin/)**.
+
 ### Authors
 
 * **Shaheena Quresh** - *Initial work* - [Shaheenaq](https://github.com/shaheenaq)
