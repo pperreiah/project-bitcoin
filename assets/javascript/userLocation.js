@@ -24,5 +24,7 @@ function geoPosition(){
 		output.html("Unable to retrieve your location");
 	}
 
-	navigator.geolocation.geoPosition(sucess, error);
+	navigator.geolocation.geoPosition(success, error);
 }
+
+
