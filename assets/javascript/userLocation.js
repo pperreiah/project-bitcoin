@@ -12,7 +12,7 @@ function geoPosition(){
 		var longitude = position.coords.longitude;
 
 		output.html("<p>Latitude is " + latitude);
-		output.html("<p>Longitude is " + longitude);
+		output.append("<p>Longitude is " + longitude);
 
 		var img = $("<img>");
 		img.attr("src", "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false");
@@ -24,7 +24,7 @@ function geoPosition(){
 		output.html("Unable to retrieve your location");
 	}
 
-	navigator.geolocation.geoPosition(success, error);
+	navigator.geolocation.getCurrentPosition(success, error);
 }
 
 
