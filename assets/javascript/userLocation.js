@@ -20,6 +20,9 @@ function success(position) {
     animation: google.maps.Animation.DROP,
     title: "This is your location"
   });
+
+  //add markers
+  addMarkers();
   
   // add marker to the map
   markers.setMap(map);
