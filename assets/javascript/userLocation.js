@@ -2,6 +2,8 @@ function success(position) {
   
   // variable to store the coordinates
   var location = position.coords.latitude + ',' + position.coords.longitude;
+
+coinMapinfo(position);
   
   // setup the map using user location
   var mapOptions = {
@@ -20,6 +22,9 @@ function success(position) {
     animation: google.maps.Animation.DROP,
     title: "This is your location"
   });
+
+  // //add markers
+  // addMarkers();
   
   // add marker to the map
   markers.setMap(map);
