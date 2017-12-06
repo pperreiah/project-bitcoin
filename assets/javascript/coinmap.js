@@ -1,31 +1,33 @@
-  function coinMapinfo(position){
-    
-console.log(position);
+  function coinMapinfo(position) {
 
-  var longitudeMax = Math.round(position.coords.longitude)+1;
-  var longitudeMin = Math.round(position.coords.longitude)-1;
-  var latitudeMax = Math.floor(position.coords.latitude)+1;
-  var latitudeMin = Math.floor(position.coords.latitude)-1;
+    console.log(position);
 
-  var queryURL = "https://cors-anywhere.herokuapp.com/coinmap.org/api/v1/venues/?lat1=" + latitudeMin + "&lat2=" + latitudeMax + "&lon1=" + longitudeMin + "&lon2=" +longitudeMax;
-  console.log(queryURL);
+    var longitudeMax = Math.round(position.coords.longitude) + 1;
+    var longitudeMin = Math.round(position.coords.longitude) - 1;
+    var latitudeMax = Math.floor(position.coords.latitude) + 1;
+    var latitudeMin = Math.floor(position.coords.latitude) - 1;
 
-  $.ajax({
-    url:queryURL,
-    method:"GET"
-  }).done(function(reponse) {
+    var queryURL = "https://cors-anywhere.herokuapp.com/coinmap.org/api/v1/venues/?lat1=" + latitudeMin + "&lat2=" + latitudeMax + "&lon1=" + longitudeMin + "&lon2=" + longitudeMax;
+    console.log(queryURL);
 
-var results = reponse.venues;
-console.log(results);
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).done(function (reponse) {
 
-for (var i = 0; i < results.length; i++) {
-  console.log(results[i]);
-  // var longitude = results[i].lon;
-  // var latitude = results[i].lat;
+      var results = reponse.venues;
+      console.log(results);
 
-}
+      for (var i = 0; i < results.length; i++) {
+        console.log(results[i]);
+        var lat = results[i].lat;
+        var lng = results[i].lon;        
+
+        addMarkers(lat, lng, results[i].name);
+
+      }
 
 
-  });
+    });
 
-}
+  }

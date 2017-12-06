@@ -1,14 +1,14 @@
 // Adds a marker to the map.
-function addMarkers() {
+function addMarkers(lat, lng, name) {
   var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
   var marker = new google.maps.Marker({
     position: {
-      lat: 33.7634,
-      lng: -84.3951
+      lat: lat,
+      lng: lng
     },
     map: map,
     icon: image,
-    title: "This is the Georgia Aquarium!"
+    title: name
   });
 
   //make maker info box
