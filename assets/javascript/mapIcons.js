@@ -28,4 +28,4 @@ function addMarkers() {
     marker.append(contentString);
     console.log('marker clicked');
   }); 
-}
+};
