@@ -1,103 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>WeCoin</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<title>WeCoin</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 </head>
 <body>
-
-	<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="page-header">
-						<h1>
-							WeCoin! <small>:For the Classmates By the Classmates</small>
-						</h1>
-					</div>
+	<header class="panel panel-default">
+		<div class="panel-body">
+		<h1>WeCoin</h1>
+		</div>
+	</header>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<h3>Geolocation</h3>
+      					<p>Finding your location: <span id="status">checking...</span></p>
+    				</div>
 				</div>
-			</div>
-
-<br>
-
-			<div class="row">
-				<div class="col-md-12">
-					<div class="media">
-						 <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
-						<div id="map-heading" class="media-body">
-							<h4 class="media-heading">
-								MAP heading
-							</h4> 
-							<div id="userLocationMap" class="media">
-								 <a href="#" class="pull-left"><img alt="Bootstrap Media Another Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
-								<div class="media-body">
-									<h4 class="media-heading">
-										THIS IS WHERE THE MAP WILL LOAD.
-									</h4> 
-									THIS IS WHERE THE MAP WILL LOAD.
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<ul id="map-nav-bar" class="nav nav-tabs">
-						<li class="active">
-							<a href="#">Home</a>
-						</li>
-						<li>
-							<a href="#">Profile</a>
-						</li>
-						<li class="disabled">
-							<a href="#">Messages</a>
-						</li>
-						<li class="dropdown pull-right">
-							 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="#">Action</a>
-								</li>
-								<li>
-									<a href="#">Another action</a>
-								</li>
-								<li>
-									<a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									<a href="#">Separated link</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
+				<div class="row">
+					<div class="col-md-12" id="map-canvas">
+						
+					</div>					
 				</div>
 			</div>
 		</div>
 	</div>
-
-<br>	
-
-	<div class="row">
-		<div class="col-md-12">
-			<h1>FOOTER</h1>
-		</div>
-	</div>
-</div>
-	
-	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">		
-	</script> -->
-
-    <script
-    src="https://code.jquery.com/jquery-3.2.1.min.js"
-    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-    crossorigin="anonymous"></script>
-    <script type="text/javascript" src="assets/javascript/userLocation.js"></script>
-    <script src="./assets/javascript/app.js"></script>
+<footer class="navbar navbar-default navbar-fixed-bottom">
+	<ul class="nav nav-pills">
+    <li role="presentation" class="active"><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">BookMark</a></li>
+    <li role="presentation"><a href="#">Exchange Rate</a></li>
+	</ul>
+</footer>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>

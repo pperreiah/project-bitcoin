@@ -1,30 +1,49 @@
-//Determine the location of the user with long and lat co-ordinates
-
-function geoPosition(){
-	var output = $("#userLocationMap");
-
-	if(!navigator.geolocation){
-		output.html("<p> Geolocation is not supported by your browser</p>");
-	}
-
-	function success(position) {
-		var latitude = position.coords.latitude;
-		var longitude = position.coords.longitude;
-
-		output.html("<p>Latitude is " + latitude);
-		output.append("<p>Longitude is " + longitude);
-
-		var img = $("<img>");
-		img.attr("src", "https://maps.googleapis.com/maps/api/staticmap?center=" + latitude + "," + longitude + "&zoom=13&size=300x300&sensor=false");
-
-		output.append(img);
-	}
-
-	function error(){
-		output.html("Unable to retrieve your location");
-	}
-
-	navigator.geolocation.getCurrentPosition(success, error);
+function success(position) {
+  
+  // variable to store the coordinates
+  var location = position.coords.latitude + ',' + position.coords.longitude;
+  
+  // setup the map using user location
+  var mapOptions = {
+    center: new google.maps.LatLng( position.coords.latitude, position.coords.longitude ),
+    zoom: 16,
+    zoomControl: true,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  
+  // add map to the html
+  map = new google.maps.Map( document.getElementById("map-canvas"), mapOptions );
+  
+  // setup the marker
+  var markers = new google.maps.Marker( {
+    position:mapOptions.center,
+    animation: google.maps.Animation.DROP,
+    title: "This is your location"
+  });
+  
+  // add marker to the map
+  markers.setMap(map);
+  
+  // select the span with id status
+  var s = $('#status');
+   
+  // update the status message
+  s.html('found you!');
 }
+ 
+function error(msg) {
+  // select the span with id status
+  var s = $('#status');
+  
+  // set the error message
+  s.html(typeof msg == 'string' ? msg : "failed");
+}
+ 
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+} else {
+  error('not supported');
+}
+
 
 
