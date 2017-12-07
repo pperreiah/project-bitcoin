@@ -1,6 +1,31 @@
 // Adds a marker to the map.
-function addMarkers(lat, lng, name) {
-  var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+function addMarkers(lat, lng, name, category) {
+
+  // check location category
+  var imageURL;
+  if (category === 'atm') {
+    imageURL = './assets/images/icons/atm.svg';
+  } else if (category === 'food') {
+    imageURL = './assets/images/icons/restaurant.svg';
+  } else if (category === 'sports') {
+    if (name.toLowerCase().search('gym') > -1|| name.toLowerCase().search('fitness') > -1) {
+      imageURL = './assets/images/icons/gym.svg';
+    }else{
+      imageURL = './assets/images/icons/stadium.svg';      
+    }
+  } else {
+    imageURL = './assets/images/icons/map-pin.svg';
+  }
+
+  //make image
+  var image = {
+    url: imageURL,
+    scaledSize: new google.maps.Size(25, 25), // scaled size
+    origin: new google.maps.Point(0, 0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+  };
+
+  //make marker
   var marker = new google.maps.Marker({
     position: {
       lat: lat,
@@ -23,9 +48,9 @@ function addMarkers(lat, lng, name) {
   });
 
   //listen for click on marker
-  marker.addListener('click', function(){
+  marker.addListener('click', function () {
     infoWindow.open(map, marker);
     marker.append(contentString);
     console.log('marker clicked');
-  }); 
+  });
 };
