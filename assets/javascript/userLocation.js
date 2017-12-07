@@ -8,7 +8,7 @@ coinMapinfo(position);
   // setup the map using user location
   var mapOptions = {
     center: new google.maps.LatLng( position.coords.latitude, position.coords.longitude ),
-    zoom: 16,
+    zoom: 10,
     zoomControl: true,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   };
