@@ -13,13 +13,13 @@
     $.ajax({
       url: queryURL,
       method: "GET"
-    }).done(function (reponse) {
+    }).done(function (response) {
 
-      var results = reponse.venues;
+      var results = response.venues;
       console.log(results);
 
       for (var i = 0; i < results.length; i++) {
-        console.log(results[i]);
+        console.log(results[i].category);
         var lat = results[i].lat;
         var lng = results[i].lon;
         var name = results[i].name;
