@@ -1,0 +1,62 @@
+/*CSS Style Sheet for btc price ticker*/
+
+#btc-price-currency-selection-div{
+	margin-left: 60px;
+	margin-top: 60px;
+	display: block;
+}
+
+#btc-price-form{
+	display: inline-block;
+	font-size: 15px;	
+}
+
+#coindesk-ref{
+	font-size: 15px;
+	font-style: italic;
+	font-family: comic;
+	display: inline-block;
+}
+
+#coinDeskID{
+	display: inline-block;
+	font-weight: bold;
+	font-size: 15px;	 
+}
+
+
+#display-price-converter{
+	display: block;
+	font-size: 15px;
+	margin-left: 60px;
+}	
+
+#converter-form{
+	display: inline-block;
+}
+
+#price-input{
+	width: 100px;
+	text-align: right;
+	font-size: 15px;
+	display: inline-block;	
+}
+
+
+#price-output-container{
+	margin-left: 60px;
+	display: block;
+}
+
+#price-output{
+	font-weight: bold;
+	font-size: 15px;
+	display: inline-block;		
+}
+
+#convertedPricePost{
+	margin-left: 3px;
+	font-size: 15px;
+	font-weight: bold;
+	display: inline-block;	
+}
