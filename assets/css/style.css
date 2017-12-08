@@ -1,0 +1,29 @@
+.panel {
+	background: black;
+	color: orange;
+	text-align: center;
+
+}
+
+#map-canvas {
+          height: 400px;
+      }
+      
+#map-canvas img {
+          max-width: none;
+      }
+
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover {
+	color: orange;
+	background-color: black;
+}
+a{color: orange;}
+
+.nav>li>a.active,
+.nav>li>a:hover,
+.nav>li>a:focus {
+   background-color: black;
+   color:orange;
+}
+
