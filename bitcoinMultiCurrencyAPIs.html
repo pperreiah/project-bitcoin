@@ -1,144 +1,64 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-
     <title>Test: Bitcoin Ticker</title>
-	
     <meta charset="utf-8">
-
     <!-- Link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./assets/css/btc-price-ticker-style.css">
     <!-- Link to the jQuery Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Link to the accounting.js formatting Library -->   
+    <!-- Link to the accounting.js formatting Library -->
     <script src="./assets/javascript/accounting.js"></script>
-
+    
 </head>
-
 
 <body>
 
-    <!-- Bitcoin Quote Drop Down Select Box -->    
-    <div id="btc-price-currency-selection-div" class="row">
-        <form id="btc-price-form">
-            <!-- Label for Text Box -->
-            <label id="display-box-label" for="price-display">Current Bitcoin Price </label>
-            <!-- Price Combo Box -->
-            <select id="price-display">
-			  <option id="USDprice" value="USDprice">btcPrice.usd</option>
-			  <option id="GBPprice" value="GBPprice">btcPrice.gbp</option>
-			  <option id="EURprice" value="EURprice">btcPrice.eur</option>
-			</select>
-        </form>
-        <div id="coindesk-ref">   *Powered by </div> <a id="coinDeskID" href="https://www.coindesk.com/price/">CoinDesk</a>
-	   <br>
-    </div>
+    <div id="module-div">
+
+        <!-- Bitcoin Quote Drop Down Select Combo Box -->            
+        <select id="currency-choices" onselect="refreshBtcPrice()">
+            <option id="selectCurrency" value="USD">Select Currency</option>
+            <option id="USDprice" value="USD">BTC in US Dollar</option>
+            <option id="EURprice" value="EUR">BTC in Euro</option>
+            <option id="GBPprice" value="GBP">BTC in British Pound</option>
+            <option id="CADprice" value="CAD">BTC in Canadian Dollar</option>
+            <option id="MXNprice" value="MXN">BTC in Mexican Peso</option>
+            <option id="JPYprice" value="JPY">BTC in Japanese Yen</option>
+            <option id="CNYprice" value="CNY">BTC in Chinese Yuan Renminbi</option>
+            <option id="INRprice" value="INR">BTC in Indian Rupee</option>
+            <option id="CHFprice" value="CHF">BTC in Swiss Franc</option>
+            <option id="BRLprice" value="BRL">BTC in Brazilian Real</option>
+            <option id="KRWprice" value="KRW">BTC in South Korean Won</option>
+            <option id="HKDprice" value="HKD">BTC in Hong Kong Dollar</option>
+            <option id="SGDprice" value="SGD">BTC in Singapore Dollar</option>
+            <option id="AUDprice" value="AUD">BTC in Australian Dollar</option>
+            <option id="NZDprice" value="NZD">BTC in New Zealand Dollar</option>
+            <option id="ILSprice" value="ILS">BTC in Israeli Shekel</option>
+            <option id="MYRprice" value="MYR">BTC in Malaysian Ringgit</option>
+            <option id="ARSprice" value="ARS">BTC in Argentinian Peso</option>
+            <option id="CLPprice" value="CLP">BTC in Chilean Peso</option>
+        </select>
+
+        <div id="price-display">Bitcoin Price</div>
+
+        <!-- Convert Button -->
+        <input type="button" value="Convert a select currency price to BTC" id="convert-price">   
+        <!-- Text Input Box -->
+        <input id="price-input" type="text">
+        <!-- Text Output Box -->        
+        <div id="convertedPricePost">Price in BTC</div>
+        
+        <div id="coindesk-ref-container">
+            <div id="coindesk-ref"> *Powered by </div> <a id="coinDeskID" href="https://www.coindesk.com/price/"> CoinDesk</a>
+        </div>
     
-    <div id="display-price-converter">
-        <form id="converter-form">
-            <!-- Label for Text Box -->
-            <label id="inputbox-label" for="price-input">Convert a price to bitcoin </label>
-            <!-- Text Input Box -->
-            <input id="price-input" type="text" >
-            <!-- Submit Button -->
-            <input id="convert-price" type="submit" value=" Convert ">
-        </form>
-    </div>
-    <div id="price-output-container">
-        <div id="price-output" type="text">Price in Bitcoin = </div>
-        <div id="convertedPricePost"></div>
-    </div>
-    </div>
+    </div> 
 
+    <script src="./assets/javascript/btcMultiCurrencyAPIs.js"></script>
 
-    <script type="text/javascript">
-
-        $(document).ready(function() {
-
-            var btcPrice = {
-             	usd : "usdValue",
-             	gbp : "gbpValue",
-             	eur : "eurValue",
-                usdRaw: "usdraw",
-                gbpRaw: "gbpraw",
-                eurRaw: "eurraw"
-             }
-
-            // run the first price update on document ready; all subsequent calls will be done every 5 minutes 
-            refreshBtcPrice();
-
-            // Constructing a queryURL using the animal name
-            // var queryURL = "https://api.coindesk.com/v1/bpi/currentprice.json";  (3-currency json)
-            var queryURL = "https://api.coindesk.com/v1/bpi/currentprice/USD&GBP&EUR.json";  //(multi-currency JSON)          
-          
-            function refreshBtcPrice() {
-
-                // Performing an AJAX request with the queryURL
-                $.ajax({
-                        url: queryURL,
-                        method: "GET"
-                }).done(function(btcPriceJSON) {
-
-                    // storing the data from the AJAX request in the results variable
-                    var results = JSON.parse(btcPriceJSON);
-                    console.log(results) 
-
-
-                    btcPrice.usdRaw = results.bpi.USD.rate_float;
-                    btcPrice.gbpRaw = results.bpi.GBP.rate_float;
-                    btcPrice.eurRaw = results.bpi.EUR.rate_float;
-
-                    btcPrice.usd = accounting.formatMoney(results.bpi.USD.rate_float),
-                 	btcPrice.gbp = accounting.formatMoney(results.bpi.GBP.rate_float, " £", 2),
-                 	btcPrice.eur = accounting.formatMoney(results.bpi.EUR.rate_float, " €", 2, ".", ",")
-
-                    $("#display-prices").text(btcPrice.usd);                    
-
-                    $("#USDprice").text(btcPrice.usd);                 
-
-                });  //done function()
-
-            };  
-
-            //refreshBtcPrice function
-            setInterval(refreshBtcPrice, 10000);
-
-            // Event handler for user clicking the submit reaction button
-            $("#convert-price").on("click", function(event) {
-                // Preventing the button from trying to submit the form
-                event.preventDefault();
-                // Storing the reaction name
-                var inputPrice = $("#price-input").val().trim();
-                var conversionFactor = 0;
-                var outputPrice = 0;
-
-                var e = document.getElementById("price-display");
-                var currencySelected = e.options[e.selectedIndex].value;
-
-                //Based on currency selected convert outPut price
-                switch (currencySelected) {
-                    case "USDprice":
-                        conversionFactor = parseFloat(btcPrice.usdRaw);
-                        outputPrice = accounting.formatMoney( parseFloat(inputPrice) * conversionFactor)
-                        break;
-                    case "GBPprice":
-                        conversionFactor = parseFloat(btcPrice.gbpRaw);
-                        outputPrice = accounting.formatMoney( parseFloat(inputPrice) * conversionFactor, " £", 2)
-                        console.log("switch output price = " + outputPrice)
-                        break;
-                    case "EURprice":
-                        conversionFactor = parseFloat(btcPrice.eurRaw);
-                        outputPrice = accounting.formatMoney( parseFloat(inputPrice) * conversionFactor, " €", 2, ".", ",")
-                };
-
-                //Display converted price
-                $("#convertedPricePost").text(outputPrice);
-
-            }); //on click submit button function()
-
-
-        }); //document ready
-    </script>
 </body>
+
 </html>
