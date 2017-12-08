@@ -1,1 +1,55 @@
-<svg version="1.2" baseProfile="tiny" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" overflow="inherit"><path d="M46 32v8h4v-12h-46v-16.34c0-1.123-.869-2.042-2-2.042-1.127 0-2 .918-2 2.042v28.34h4v-8h42zm-35.67-12.148c2.041 0 3.687-1.653 3.687-3.694 0-2.027-1.646-3.675-3.687-3.675-2.038 0-3.683 1.647-3.683 3.675 0 2.04 1.645 3.694 3.683 3.694zm39.67 5.148l-.014-4.871c-.013-1.606-1.36-2.618-2.939-2.809l-28.957-2.833-.215-.009c-1.006 0-1.875.834-1.875 1.835v5.687h-7.453c-1.011 0-1.826.5-1.826 1.499 0 1.015.815 1.501 1.826 1.501h41.453z"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   width="50"
+   height="50"
+   viewBox="0 0 50 50"
+   overflow="inherit"
+   id="svg2311"
+   sodipodi:docname="lodging.svg"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+  <metadata
+     id="metadata2317">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2315" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1695"
+     inkscape:window-height="1118"
+     id="namedview2313"
+     showgrid="false"
+     inkscape:zoom="4.72"
+     inkscape:cx="25"
+     inkscape:cy="-8.8983051"
+     inkscape:window-x="0"
+     inkscape:window-y="60"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2311" />
+  <path
+     d="M46 32v8h4v-12h-46v-16.34c0-1.123-.869-2.042-2-2.042-1.127 0-2 .918-2 2.042v28.34h4v-8h42zm-35.67-12.148c2.041 0 3.687-1.653 3.687-3.694 0-2.027-1.646-3.675-3.687-3.675-2.038 0-3.683 1.647-3.683 3.675 0 2.04 1.645 3.694 3.683 3.694zm39.67 5.148l-.014-4.871c-.013-1.606-1.36-2.618-2.939-2.809l-28.957-2.833-.215-.009c-1.006 0-1.875.834-1.875 1.835v5.687h-7.453c-1.011 0-1.826.5-1.826 1.499 0 1.015.815 1.501 1.826 1.501h41.453z"
+     id="path2309"
+     style="fill:#ffd42a" />
+</svg>

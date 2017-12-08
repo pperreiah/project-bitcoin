@@ -17,9 +17,10 @@
 
       var results = response.venues;
       console.log(results);
-
+      var markers = [];
+      
       for (var i = 0; i < results.length; i++) {
-        console.log(results[i].category);
+        console.log(results[i]);
         var lat = results[i].lat;
         var lng = results[i].lon;
         var name = results[i].name;

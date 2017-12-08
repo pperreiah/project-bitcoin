@@ -23,9 +23,9 @@ function addMarkers(lat, lng, name, category) {
     imageURL = './assets/images/icons/map-pin.svg';
   }
 
+
   //make image
   var image = {
-    fillColor: '#00CCBB',
     url: imageURL,
     scaledSize: new google.maps.Size(25, 25), // scaled size
     origin: new google.maps.Point(0, 0), // origin
@@ -42,22 +42,15 @@ function addMarkers(lat, lng, name, category) {
     icon: image,
     title: name
   });
+ 
 
   //make maker info box
-  var contentString = $('<div id="content">');
-  var p = $('<p>').text('You clicked a marker');
-  contentString.append(p);
-
+  var contentString = '<h1>'+name+'</h1>';
   //put marker info box on the map
   var infoWindow = new google.maps.InfoWindow({
     content: contentString,
     maxWidth: 200
   });
 
-  //listen for click on marker
-  marker.addListener('click', function () {
-    infoWindow.open(map, marker);
-    marker.append(contentString);
-    console.log('marker clicked');
-  });
+ 
 };
