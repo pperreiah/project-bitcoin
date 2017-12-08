@@ -12,11 +12,11 @@
    height="50"
    viewBox="0 0 50 50"
    overflow="inherit"
-   id="svg6247"
+   id="svg3427"
    sodipodi:docname="map-pin.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
-     id="metadata6253">
+     id="metadata3433">
     <rdf:RDF>
       <cc:Work
          rdf:about="">
@@ -27,7 +27,7 @@
     </rdf:RDF>
   </metadata>
   <defs
-     id="defs6251" />
+     id="defs3431" />
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -37,9 +37,9 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1407"
-     inkscape:window-height="1028"
-     id="namedview6249"
+     inkscape:window-width="1445"
+     inkscape:window-height="1118"
+     id="namedview3429"
      showgrid="false"
      inkscape:zoom="4.72"
      inkscape:cx="25"
@@ -47,9 +47,9 @@
      inkscape:window-x="0"
      inkscape:window-y="60"
      inkscape:window-maximized="0"
-     inkscape:current-layer="svg6247" />
+     inkscape:current-layer="svg3427" />
   <path
      d="M25.015 2.4c-7.8 0-14.121 6.204-14.121 13.854 0 7.652 14.121 32.746 14.121 32.746s14.122-25.094 14.122-32.746c0-7.65-6.325-13.854-14.122-13.854z"
-     id="path6245"
-     style="fill:#2ad4ff" />
+     id="path3425"
+     style="fill:#00ccff" />
 </svg>
