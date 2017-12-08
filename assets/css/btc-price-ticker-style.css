@@ -17,6 +17,9 @@
 	font-size: 14px;
 }
 
+#currency-choices{
+	height: 30px;
+}
 #btc-price-form{
 	display: inline-block;
 	font-size: 15px;

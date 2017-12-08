@@ -15,6 +15,8 @@
         // run the first price update on document ready; all subsequent calls will be done on the selection of a new currency and every 10 seconds 
         refreshBtcPrice();
 
+        $("#currency-choices").on("change", refreshBtcPrice);
+
         function refreshBtcPrice() {
 
             // Constructing a queryURL using the currency ISO4217 symbol
