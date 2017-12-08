@@ -1,0 +1,127 @@
+/*CSS Style Sheet for btc price ticker*/
+
+#module-div{
+    margin-left: 60px;
+    margin-top: 60px;
+    display: block;
+    width: 465px;
+    border-right: darkorange 1px solid;
+    border-left: darkorange 1px solid;
+    border-top: darkorange 1px solid;
+    border-bottom: darkorange 1px solid;
+    border-radius: 5px;
+    background: lightblue;
+    padding-right: 5px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 0px;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+#currency-choices{
+	height: 30px;
+	top-margin: 2px;
+	bottom-margin: 2px;
+	right-margin: 1px;	
+	left-margin: 3px;
+	height: 30px;
+	border-radius: 3px;
+	vertical-align: center;
+	border-right: black 1px solid;
+	border-left: black 1px solid;
+	border-top: black 1px solid;
+	border-bottom: black 1px solid;
+}
+#btc-price-form{
+	display: inline-block;
+	font-size: 15px;
+	height: 30px;	
+}
+
+#price-display{
+	display: inline-block;
+	text-align: center;
+	font-size: 15px;	font-weight: bold;
+	border-right: black 1px solid;
+	border-left: black 1px solid;
+	border-top: black 1px solid;
+	border-bottom: black 1px solid;
+	width: 221px;
+	background: lightgrey;
+	top-margin: 2px;
+	bottom-margin: 2px;
+	left-margin: 1px;
+	height: 30px;
+	border-radius: 3px;
+	vertical-align: center;
+}
+
+#coindesk-ref-container{
+	width: 440px;
+	display: flex;
+    justify-content:flex-end; 
+	margin: 2px;
+	height:24px;
+}
+#coindesk-ref{
+	font-style: italic;
+	font-family: comic;	
+	color: white;
+	margin-right: 4px;
+}
+#coinDeskID{	
+	font-weight: bold;
+	color: darkorange;	 
+}
+
+#convert-price{
+	display: block;
+	width: 447px;
+	background: darkorange;
+	color: white;
+	font-weight: bold;	
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 2px;
+	margin-left: -1px;
+	border-radius: 3px;
+	vertical-align: center;
+}
+
+#price-input{
+	width: 220px;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	border-right: black 1px solid;
+	border-left: black 1px solid;
+	border-top: black 1px solid;
+	border-bottom: black 1px solid;	
+	top-margin: 2px;
+	bottom-margin: 2px;
+	right-margin: 1px;
+	left-margin: 3px;	
+	height: 30px;
+	border-radius: 3px;
+	vertical-align: center;
+}
+
+#convertedPricePost{
+	font-weight: bold;
+	width: 222px;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	background: lightgray;
+	border-right: black 1px solid;
+	border-left: black 1px solid;
+	border-top: black 1px solid;
+	border-bottom: black 1px solid;
+	top-margin: 3px;
+	bottom-margin: 1px;
+	left-margin: 1px;
+	height: 30px;
+	border-radius: 3px;
+	vertical-align: center;
+}
