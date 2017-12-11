@@ -16,7 +16,8 @@
 	</header>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			
+            <div class="col-md-6">
 				<div class="row">
 					<div class="col-md-12">		
 						<h3>Geolocation</h3>
@@ -24,80 +25,104 @@
     				</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12" id="map-canvas">
-						
-					</div>					
+					<div class="col-md-12" id="map-canvas">	</div>					
 				</div>
 			</div>
+
 			<div class="col-md-5 col-md-offset-1" id="exchange-rate">
-			<!-- Bitcoin current value and exchange rate info -->
-			<div id="module-div">
+                <div class="row">
+        			<!-- Bitcoin current value and exchange rate info -->
+        			<div id="module-div" class="col-md-12">
 
-        <!-- Bitcoin Quote Drop Down Select Combo Box -->            
-        <select id="currency-choices">
-            <option id="selectCurrency" value="USD">Select Currency</option>
-            <option id="USDprice" value="USD">BTC in US Dollar</option>
-            <option id="EURprice" value="EUR">BTC in Euro</option>
-            <option id="GBPprice" value="GBP">BTC in British Pound</option>
-            <option id="CADprice" value="CAD">BTC in Canadian Dollar</option>
-            <option id="MXNprice" value="MXN">BTC in Mexican Peso</option>
-            <option id="JPYprice" value="JPY">BTC in Japanese Yen</option>
-            <option id="CNYprice" value="CNY">BTC in Chinese Yuan Renminbi</option>
-            <option id="INRprice" value="INR">BTC in Indian Rupee</option>
-            <option id="CHFprice" value="CHF">BTC in Swiss Franc</option>
-            <option id="BRLprice" value="BRL">BTC in Brazilian Real</option>
-            <option id="KRWprice" value="KRW">BTC in South Korean Won</option>
-            <option id="HKDprice" value="HKD">BTC in Hong Kong Dollar</option>
-            <option id="SGDprice" value="SGD">BTC in Singapore Dollar</option>
-            <option id="AUDprice" value="AUD">BTC in Australian Dollar</option>
-            <option id="NZDprice" value="NZD">BTC in New Zealand Dollar</option>
-            <option id="ILSprice" value="ILS">BTC in Israeli Shekel</option>
-            <option id="MYRprice" value="MYR">BTC in Malaysian Ringgit</option>
-            <option id="ARSprice" value="ARS">BTC in Argentinian Peso</option>
-            <option id="CLPprice" value="CLP">BTC in Chilean Peso</option>
-        </select>
+                        <!-- Bitcoin Quote Drop Down Select Combo Box -->            
+                        <select id="currency-choices">
+                            <option id="selectCurrency" value="USD">Select Currency</option>
+                            <option id="USDprice" value="USD">BTC in US Dollar</option>
+                            <option id="EURprice" value="EUR">BTC in Euro</option>
+                            <option id="GBPprice" value="GBP">BTC in British Pound</option>
+                            <option id="CADprice" value="CAD">BTC in Canadian Dollar</option>
+                            <option id="MXNprice" value="MXN">BTC in Mexican Peso</option>
+                            <option id="JPYprice" value="JPY">BTC in Japanese Yen</option>
+                            <option id="CNYprice" value="CNY">BTC in Chinese Yuan Renminbi</option>
+                            <option id="INRprice" value="INR">BTC in Indian Rupee</option>
+                            <option id="CHFprice" value="CHF">BTC in Swiss Franc</option>
+                            <option id="BRLprice" value="BRL">BTC in Brazilian Real</option>
+                            <option id="KRWprice" value="KRW">BTC in South Korean Won</option>
+                            <option id="HKDprice" value="HKD">BTC in Hong Kong Dollar</option>
+                            <option id="SGDprice" value="SGD">BTC in Singapore Dollar</option>
+                            <option id="AUDprice" value="AUD">BTC in Australian Dollar</option>
+                            <option id="NZDprice" value="NZD">BTC in New Zealand Dollar</option>
+                            <option id="ILSprice" value="ILS">BTC in Israeli Shekel</option>
+                            <option id="MYRprice" value="MYR">BTC in Malaysian Ringgit</option>
+                            <option id="ARSprice" value="ARS">BTC in Argentinian Peso</option>
+                            <option id="CLPprice" value="CLP">BTC in Chilean Peso</option>
+                        </select>
 
-        <div id="price-display">Bitcoin Price</div>
+                        <div id="price-display">Bitcoin Price</div>
 
-        <!-- Convert Button -->
-        <input type="button" value="Convert a select currency price to BTC" id="convert-price">   
-        <!-- Text Input Box -->
-        <input id="price-input" type="text">
-        <!-- Text Output Box -->        
-        <div id="convertedPricePost">Price in BTC</div>
-        
-        <div id="coindesk-ref-container">
-            <div id="coindesk-ref"> *Powered by </div> <a id="coinDeskID" href="https://www.coindesk.com/price/"> CoinDesk</a>
-        </div>
-    
-    </div> 
-					
-			</div>
-		</div>
-	</div>
-<footer class="navbar navbar-default navbar-fixed-bottom">
-	<ul class="nav nav-pills">
-    <li role="presentation" class="active"><a href="#">Home</a></li>
-    <li role="presentation"><a href="./bookmark.html">Bookmark</a></li>
-    <li role="presentation"><a href="#">Exchange Rate</a></li>
-	</ul>
-</footer>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+                        <!-- Convert Button -->
+                        <input type="button" value="Convert a select currency price to BTC" id="convert-price">   
+                        <!-- Text Input Box -->
+                        <input id="price-input" type="text">
+                        <!-- Text Output Box -->        
+                        <div id="convertedPricePost">Price in BTC</div>
+                        
+                        <div id="coindesk-ref-container">
+                            <div id="coindesk-ref"> *Powered by </div> <a id="coinDeskID" href="https://www.coindesk.com/price/"> CoinDesk</a>
+                        </div>
+                    </div> <!-- exchange module -->
+                </div>  <!-- row -->
+	
+                <div class="row">
+                    <!-- List of found BTC merchants -->
+                    <div id="merchants-container" class="col-md-12">
+                        <div >
+                            <div class="merchants-panel-heading">BTC merchants found:</div>
+                            <div id="merchants-appear-here" >
+                            </div>
+                        </div> <!-- panel body-->
+                    </div>  <!-- merchant container -->    
+                </div> <!-- row --> 
+
+            </div> <!-- BTC exchange rate  and merchant div-->
+
+	</div> <!-- Main container -->
+
+    <footer class="navbar navbar-default navbar-fixed-bottom">
+    	<ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">BookMark</a></li>
+        <li role="presentation"><a href="#">Exchange Rate</a></li>
+        <li role="presentation">
+            <fieldset id="categories-multiselect" data-role="controlgroup">    
+                    <input type="checkbox" name="checkbox-1" id="checkbox-ATM" class="custom" />
+                    <label for="checkbox-1">ATM</label>
+                    <input type="checkbox" name="checkbox-1" id="checkbox-Food" class="custom" />
+                    <label for="checkbox-1">Food</label>
+                    <input type="checkbox" name="checkbox-1" id="checkbox-Lodging" class="custom" />
+                    <label for="checkbox-1">Lodging</label>
+                    <input type="checkbox" name="checkbox-1" id="checkbox-Shopping" class="custom" />
+                    <label for="checkbox-1">Shopping</label>
+                    <input type="checkbox" name="checkbox-1" id="checkbox-Sports" class="custom" />
+                    <label for="checkbox-1">Sports</label>
+                    <input type="checkbox" name="checkbox-1" id="checkbox-Gas" class="custom" />
+                    <label for="checkbox-1">Gas</label>
+                    <input type="checkbox" name="checkbox-1" id="checkbox-Other" class="custom" />
+                    <label for="checkbox-1">Other</label>
+            </fieldset>    
+        <a href="#">Categories</a></li>
+
+    	</ul>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
-	<script type="text/javascript" src="./assets/javascript/markerCluster.js"></script>	
 	<script type="text/javascript" src="./assets/javascript/userLocation.js"></script>
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
 	<script type="text/javascript" src="assets/javascript/userLocation.js"></script>
-<<<<<<< HEAD
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>  <script type="text/javascript" src="./assets/javascript/markerCluster.js"></script> 
     <script type="text/javascript" src="./assets/javascript/addMarkers.js"></script>	
     <script type="text/javascript" src="./assets/javascript/coinmap.js"></script>
-    <!-- Link to the accounting.js formatting Library -->
-    <script src="./assets/javascript/accounting.js"></script>
+    <script type="text/javascript" src="./assets/javascript/btcMultiCurrencyAPIs.js"></script>    
+    <script type="text/javascript" src="./assets/javascript/accounting.js"></script>
 
-    <script src="./assets/javascript/btcMultiCurrencyAPIs.js"></script>
-=======
-  <script type="text/javascript" src="./assets/javascript/addMarkers.js"></script>	
-  <script type="text/javascript" src="./assets/javascript/coinmap.js"></script>
->>>>>>> 00da367c3efe71a4e54fcbf2d4c419fc6366bcb2
 </body>
 </html>
