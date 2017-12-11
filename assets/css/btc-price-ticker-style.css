@@ -1,8 +1,8 @@
 /*CSS Style Sheet for btc price ticker*/
 
 #module-div{
-    margin-left: 60px;
-    margin-top: 60px;
+    margin-left: 0px;
+    margin-top: 30px;
     display: block;
     width: 465px;
     border-right: darkorange 1px solid;
