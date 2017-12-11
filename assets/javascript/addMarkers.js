@@ -42,10 +42,13 @@ function addMarkers(lat, lng, name, category) {
     icon: image,
     title: name
   });
+    marker.addListener('click', function() {
+    infoWindow.open(map, marker);
+  });
  
 
   //make maker info box
-  var contentString = '<h1>'+name+'</h1>';
+  var contentString = '<div class="marker-content">' + '<h5>'+name+'</h5>' + '<button class="bookmarks">&#x2606</button>' + '</div>';
   //put marker info box on the map
   var infoWindow = new google.maps.InfoWindow({
     content: contentString,
