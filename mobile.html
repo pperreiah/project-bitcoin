@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/foundation.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/mobile.css">
+
+
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li class="menu-text">WeCoin</li>
+                <li>
+                    <a href="#">Two</a>
+                </li>
+                <li>
+                    <a href="#">Three</a>
+                </li>
+            </ul>
+        </div>
+        <div class="top-bar-right">
+
+        </div>
+    </div>
+
+    <!-- page elements -->
+    <div id="elements">
+        <div id="map-canvas" class="element" data-name="map-canvas" data-state="visable"></div>
+        <div id="nearMe" class="element none" data-name="nearMe" data-state="none">
+            <h1>Near Me</h1>
+        </div>
+        <div id="converter" class="element none" data-name="converter" data-state="none">
+            <h1>converter</h1>
+        </div>
+        <div id="favorits" class="element none" data-name="favorits" data-state="none">
+            <h1>Favorits</h1>
+        </div>
+        <div id="about" class="element none" data-name="about" data-state="none">
+            <h1>About</h1>
+        </div>
+    </div>
+
+
+    <!-- Mobile nav buttons -->
+    <ul class="menu align-center">
+        <li id="mapButton" data-name="map-canvas" data-state="show" class="navButton">
+            <a href="#">Map</a>
+        </li>
+        <li id="nearButton" data-name="nearMe" data-state="none" class="navButton">
+            <a href="#">Near Me</a>
+        </li>
+        <li id="converterButton" data-name="converter" data-state="none" class="navButton">
+            <a href="#">Converter</a>
+        </li>
+        <li id="favButton" data-name="favorits" data-state="none" class="navButton">
+            <a href="#">favorits</a>
+        </li>
+        <li id="aboutButton" data-name="about" data-state="none" class="navButton">
+            <a href="#">about</a>
+        </li>
+    </ul>
+
+    <!-- Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/vendor/foundation.js"></script>    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
+    <script type="text/javascript" src="./assets/javascript/markerCluster.js"></script>
+    <script type="text/javascript" src="./assets/javascript/userLocation.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
+    <script type="text/javascript" src="assets/javascript/userLocation.js"></script>
+    <script type="text/javascript" src="./assets/javascript/addMarkers.js"></script>
+    <script type="text/javascript" src="./assets/javascript/coinmap.js"></script>
+    <script type="text/javascript" src="./assets/javascript/mobile.js"></script>
+</body>
+
+</html>

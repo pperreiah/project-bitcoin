@@ -1,0 +1,16 @@
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    #map-canvas {
+        height: 80vh;
+    }
+    
+    .element{
+        height: 80vh;    
+    }
+}
+
+
+
+
