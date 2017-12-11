@@ -1,8 +1,7 @@
 .panel {
-	background: black;
-	color: orange;
-	text-align: center;
-
+    background: black;
+    color: orange;
+    text-align: center;
 }
 
 #map-canvas {
@@ -12,15 +11,18 @@
       }
       
 #map-canvas img {
-          max-width: none;
-      }
+    max-width: none;
+}
 
 .nav-pills>li.active>a,
 .nav-pills>li.active>a:hover {
-	color: orange;
-	background-color: black;
+    color: orange;
+    background-color: black;
 }
-a{color: orange;}
+
+a {
+    color: orange;
+}
 
 .nav>li>a.active,
 .nav>li>a:hover,
