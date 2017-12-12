@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     // run the first price update on document ready; all subsequent calls will be done on the selection of a new currency and every 10 seconds 
     refreshBtcPrice();
-
+    $("#convertedPricePost").text("<== Please enter valid price");
     $("#currency-choices").on("change", refreshBtcPrice);
 
     function refreshBtcPrice() {
@@ -17,7 +17,7 @@ $(document).ready(function() {
         var queryURL = "https://api.coindesk.com/v1/bpi/currentprice/" + isoSymbol + ".json"; //(multi-currency JSON)  
 
         //Renaming price converter button label                
-        var convertButtonLabel = "Convert a " + isoSymbol + " price to BTC";
+        convertButtonLabel = "Convert a " + isoSymbol + " price to BTC";
         document.getElementById("convert-price").value = convertButtonLabel;
 
         // Performing an AJAX request with the queryURL
@@ -31,8 +31,10 @@ $(document).ready(function() {
 
             //Based on currency selected convert outPut price
             switch (isoSymbol) {
-                case "Select_Currency":
-                    outputPrice = "Bitcoin Value"
+                case "select currency":
+                    outputPrice = "<== Please select a currency"
+                    document.getElementById("display-price").value = "<== Please select a currency";
+                    document.getElementById("convert-price").value = "<== Please select a currency";
                     break;
                 case "USD":
                     outputPrice = accounting.formatMoney(resultsPriceStrg)
@@ -76,9 +78,6 @@ $(document).ready(function() {
                 case "AUD":
                     outputPrice = accounting.formatMoney(resultsPriceStrg, "  AUD$ ", 2)
                     break;
-                case "NZD":
-                    outputPrice = accounting.formatMoney(resultsPriceStrg, "  NZD$ ", 2)
-                    break;
                 case "ILS":
                     outputPrice = accounting.formatMoney(resultsPriceStrg, "   ₪ ", 2)
                     break;
@@ -115,11 +114,14 @@ $(document).ready(function() {
 
         //Check that price input is a valid number
         if (isNaN(inputPrice)) {
-            $("#price-input").text("Enter valid price");
+            $("#convertedPricePost").text("<== Please enter a valid price");
         } else {
 
             //Based on currency selected convert outPut price
             switch (isoSymbol) {
+                case "select currency":
+                    convertedPrice = "<== Please select a currency"
+                    break;
                 case "USD":
                     convertedPrice = accounting.formatMoney(parseFloat(inputPrice) / resultsPriceStrg, "BTC ", 10)
                     break;
@@ -162,9 +164,6 @@ $(document).ready(function() {
                 case "AUD":
                     convertedPrice = accounting.formatMoney(parseFloat(inputPrice) / resultsPriceStrg, "BTC ", 10);
                     break;
-                case "NZD":
-                    outputPrice = accounting.formatMoney(parseFloat(inputPrice) / resultsPriceStrg, "BTC ", 10);
-                    break;
                 case "ILS":
                     convertedPrice = accounting.formatMoney(parseFloat(inputPrice) / resultsPriceStrg, "BTC ", 10);
                     break;
@@ -180,7 +179,7 @@ $(document).ready(function() {
 
             //Display converted price
             if (inputPrice === "") {
-                $("#convertedPricePost").text("Price in BTC");
+                $("#convertedPricePost").text("<== Please enter a price");
             } else {
                 $("#convertedPricePost").text(convertedPrice);
             }; //if
