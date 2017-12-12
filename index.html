@@ -11,7 +11,7 @@
 <body>
 	<header class="panel panel-default">
 		<div class="panel-body">
-		<h1>WeCoin</h1>
+<!-- 		<h1>WeCoin</h1> -->
 		</div>
 	</header>
 	<div class="container">
@@ -19,13 +19,29 @@
 			
             <div class="col-md-6">
 				<div class="row">
-					<div class="col-md-12">		
+					<div class="col-md-12 map-above">		
 						<h3>Geolocation</h3>
       					<p>Finding your location: <span id="status">checking...</span></p>
     				</div>
 				</div>
 				<div class="row">
-					<div class="col-md-12" id="map-canvas">	</div>					
+					<div class="col-md-12" id="map-canvas"></div>
+  						<fieldset id="categories-multiselect" data-role="controlgroup">    
+		                    <input type="checkbox" name="checkbox-1" id="checkbox-ATM" class="custom" />
+		                    <label for="checkbox-1">ATM</label>
+		                    <input type="checkbox" name="checkbox-1" id="checkbox-Food" class="custom" />
+		                    <label for="checkbox-1">Food</label>
+		                    <input type="checkbox" name="checkbox-1" id="checkbox-Lodging" class="custom" />
+		                    <label for="checkbox-1">Lodging</label>
+		                    <input type="checkbox" name="checkbox-1" id="checkbox-Shopping" class="custom" />
+		                    <label for="checkbox-1">Shopping</label>
+		                    <input type="checkbox" name="checkbox-1" id="checkbox-Sports" class="custom" />
+		                    <label for="checkbox-1">Sports</label>
+		                    <input type="checkbox" name="checkbox-1" id="checkbox-Gas" class="custom" />
+		                    <label for="checkbox-1">Gas</label>
+		                    <input type="checkbox" name="checkbox-1" id="checkbox-Other" class="custom" />
+		                    <label for="checkbox-1">Other</label>
+            			</fieldset>  
 				</div>
 			</div>
 
@@ -88,37 +104,100 @@
 
 	</div> <!-- Main container -->
 
+	<!--Footer-->
+<footer class="page-footer stylish-color-dark">
+
+    <!--Footer Links-->
+    <div class="footer-container">
+
+        <!-- Footer links -->
+        <div class="row text-center text-md-left mt-3 pb-3">
+			
+            <!--First column-->
+            <div class="company-info col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="title mb-4 font-bold">WeCoin</h6>
+                <p>We are just a small group of students coming together to make something amazing. It's from the students to to the students.</p>
+            </div>
+            <!--/.First column-->
+
+           
+
+            <!--Second column-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="title mb-4">Products</h6>
+                <p><a href="#!">Coming Soon</a></p>
+                <p><a href="#!">Coming Soon</a></p>
+                <p><a href="#!">Coming Soon</a></p>
+                <p><a href="#!">Coming Soon</a></p>
+            </div>
+            <!--/.Second column-->
+
+        
+
+            <!--Third column-->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="title mb-4">Useful links</h6>
+                <p><a href="#!">Your Account</a></p>
+                <p><a href="#!">Become an Affiliate</a></p>
+                <p><a href="#!">Shipping Rates</a></p>
+                <p><a href="#!">Help</a></p>
+            </div>
+            <!--/.Third column-->
+
+
+
+            <!--Fourth column-->
+            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="title mb-4">Contact</h6>
+                <p><i class="fa fa-home mr-3"></i> New York, NY 10012, US</p>
+                <p><i class="fa fa-envelope mr-3"></i> contact@wecoin.com</p>
+                <p><i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
+                <p><i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
+            </div>
+            <!--/.Fourth column-->
+
+        </div>
+        <!-- Footer links -->
+
+        <hr>
+
+        <div class="row py-3 d-flex align-items-center">
+
+            <!--Grid column-->
+            <div class="col-md-12 col-lg-12">
+
+                <!--Copyright-->
+                <p class="text-center text-md-left grey-text">© 2017 Copyright: <a href="https://www.MDBootstrap.com"><strong>WeCoin</strong></a></p>
+                <!--/.Copyright-->
+
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+
+            <!--Grid column-->
+
+        </div>
+
+    </div>
+
+</footer>
+<!--/.Footer-->
+
+</div>	
+
     <footer class="navbar navbar-default navbar-fixed-bottom">
     	<ul class="nav nav-pills">
         <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">BookMark</a></li>
+        <li role="presentation"><a href="./bookmark.html">BookMark</a></li>
         <li role="presentation"><a href="#">Exchange Rate</a></li>
-        <li role="presentation">
-            <fieldset id="categories-multiselect" data-role="controlgroup">    
-                    <input type="checkbox" name="checkbox-1" id="checkbox-ATM" class="custom" />
-                    <label for="checkbox-1">ATM</label>
-                    <input type="checkbox" name="checkbox-1" id="checkbox-Food" class="custom" />
-                    <label for="checkbox-1">Food</label>
-                    <input type="checkbox" name="checkbox-1" id="checkbox-Lodging" class="custom" />
-                    <label for="checkbox-1">Lodging</label>
-                    <input type="checkbox" name="checkbox-1" id="checkbox-Shopping" class="custom" />
-                    <label for="checkbox-1">Shopping</label>
-                    <input type="checkbox" name="checkbox-1" id="checkbox-Sports" class="custom" />
-                    <label for="checkbox-1">Sports</label>
-                    <input type="checkbox" name="checkbox-1" id="checkbox-Gas" class="custom" />
-                    <label for="checkbox-1">Gas</label>
-                    <input type="checkbox" name="checkbox-1" id="checkbox-Other" class="custom" />
-                    <label for="checkbox-1">Other</label>
-            </fieldset>    
-        <a href="#">Categories</a></li>
-
     	</ul>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
-	<script type="text/javascript" src="./assets/javascript/userLocation.js"></script>
-	<script type="text/javascript" src="assets/javascript/userLocation.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>  <script type="text/javascript" src="./assets/javascript/markerCluster.js"></script> 
+	<script type="text/javascript" src="./assets/javascript/userLocation.js"></script> 
+    <script type="text/javascript" src="./assets/javascript/markerCluster.js"></script> 
     <script type="text/javascript" src="./assets/javascript/addMarkers.js"></script>	
     <script type="text/javascript" src="./assets/javascript/coinmap.js"></script>
     <script type="text/javascript" src="./assets/javascript/btcMultiCurrencyAPIs.js"></script>    
