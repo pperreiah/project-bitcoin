@@ -1,5 +1,18 @@
+
+h1{
+  opacity: 1.0;
+  color: gold;
+}
+
+header{
+  border: none;
+   background: url("../images/wecoinbanner.jpg");
+   height: 200px;
+}
+
 .panel {
-    background: black;
+  border: none;
+      background: black;
     color: orange;
     text-align: center;
 }
@@ -77,4 +90,29 @@ a {
     background: black;
     color: darkorange;
     border-radius: 5px;
+  opacity: 0.8;
+}
+
+.container{
+/*  margin-bottom: 200px;*/
+}
+
+fieldset{
+  display: inline-block;
+  color: gold;
+}
+
+body{
+  background-image: url("../images/bitcoinbackground.jpg");
+}
+
+.map-above{
+  color: gold;
+}
+
+.page-footer{
+  background: white;
+  margin-top: 200px;
+  margin-bottom: 75px;
+
 }
