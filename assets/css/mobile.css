@@ -1,0 +1,52 @@
+#map-canvas{
+    width: 50%;
+}
+
+.mobile{
+    visibility: hidden;
+}
+
+#nearMe{
+    float: right;
+    width: 35%;
+    margin-top: -487px;
+}
+
+#converter{
+    float: right;
+    width: 50%;    
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .mobile{
+        visibility: visible;
+    }
+    #map-canvas {
+        height: 80vh;
+        width: 100%;
+    }
+
+    #nearMe{
+        float: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .element{
+        height: 80vh;    
+    }
+
+    #nearMe{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+}
+
+
+
+
