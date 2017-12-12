@@ -12,9 +12,6 @@ header{
 
 .panel {
   border: none;
-      background: black;
-    color: orange;
-    text-align: center;
 }
 
 #map-canvas {
