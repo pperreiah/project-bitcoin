@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>WeCoin</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<link rel="stylesheet" type="text/css" href="./assets/css/btc-price-ticker-style.css">
-
+    <meta charset="UTF-8">
+    <title>WeCoin</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/btc-price-ticker-style.css">
 </head>
-<body>
-	<header class="panel panel-default">
-		<div class="panel-body">
-		<h1>WeCoin</h1>
-		</div>
-	</header>
-	<div class="container">
-		<div class="row">
-			
-            <div class="col-md-6">
-				<div class="row">
-					<div class="col-md-12">		
-						<h3>Geolocation</h3>
-      					<p>Finding your location: <span id="status">checking...</span></p>
-    				</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12" id="map-canvas">	</div>					
-				</div>
 
-                <fieldset id="categories-multiselect" data-role="controlgroup">    
+<body>
+    <header class="panel panel-default">
+        <div class="panel-body">
+            <h1>WeCoin</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Geolocation</h3>
+                        <p>Finding your location: <span id="status">checking...</span></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" id="map-canvas"> </div>
+                </div>
+                <fieldset id="categories-multiselect" data-role="controlgroup">
                     <input type="checkbox" name="checkbox-1" id="checkbox-ATM" class="custom" checked />
                     <label for="checkbox-1">ATM</label>
                     <input type="checkbox" name="checkbox-2" id="checkbox-Food" class="custom" checked />
@@ -44,15 +43,12 @@
                     <input type="checkbox" name="checkbox-7" id="checkbox-Other" class="custom" checked />
                     <label for="checkbox-7">Other</label>
                 </fieldset>
-
-			</div>
-
-			<div class="col-md-5 col-md-offset-1" id="exchange-rate">
+            </div>
+            <div class="col-md-5 col-md-offset-1" id="exchange-rate">
                 <div class="row">
-        			<!-- Bitcoin current value and exchange rate info -->
-        			<div id="module-div" class="col-md-12">
-
-                        <!-- Bitcoin Quote Drop Down Select Combo Box -->            
+                    <!-- Bitcoin current value and exchange rate info -->
+                    <div id="module-div" class="col-md-12">
+                        <!-- Bitcoin Quote Drop Down Select Combo Box -->
                         <select id="currency-choices">
                             <option id="selectCurrency" value="USD">Select Currency</option>
                             <option id="USDprice" value="USD">BTC in US Dollar</option>
@@ -75,53 +71,53 @@
                             <option id="ARSprice" value="ARS">BTC in Argentinian Peso</option>
                             <option id="CLPprice" value="CLP">BTC in Chilean Peso</option>
                         </select>
-
                         <div id="price-display">Bitcoin Price</div>
-
                         <!-- Convert Button -->
-                        <input type="button" value="Convert a select currency price to BTC" id="convert-price">   
+                        <input type="button" value="Convert a select currency price to BTC" id="convert-price">
                         <!-- Text Input Box -->
                         <input id="price-input" type="text">
-                        <!-- Text Output Box -->        
+                        <!-- Text Output Box -->
                         <div id="convertedPricePost">Price in BTC</div>
-                        
                         <div id="coindesk-ref-container">
                             <div id="coindesk-ref"> *Powered by </div> <a id="coinDeskID" href="https://www.coindesk.com/price/"> CoinDesk</a>
                         </div>
-                    </div> <!-- exchange module -->
-                </div>  <!-- row -->
-	
+                    </div>
+                    <!-- exchange module -->
+                </div>
+                <!-- row -->
                 <div class="row">
                     <!-- List of found BTC merchants -->
                     <div id="merchants-container" class="col-md-12">
-                        <div >
+                        <div>
                             <div class="merchants-panel-heading">BTC merchants found:</div>
-                            <div id="merchants-appear-here" >
+                            <div id="merchants-appear-here">
                             </div>
-                        </div> <!-- panel body-->
-                    </div>  <!-- merchant container -->    
-                </div> <!-- row --> 
-
-            </div> <!-- BTC exchange rate  and merchant div-->
-
-	</div> <!-- Main container -->
-
-    <footer class="navbar navbar-default navbar-fixed-bottom">
-    	<ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">BookMark</a></li>
-        <li role="presentation"><a href="#">Exchange Rate</a></li>
-        <!-- <li role="presentation"><a href="#">Categories</a></li> -->
-    	</ul>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
-	<script type="text/javascript" src="./assets/javascript/userLocation.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>  <script type="text/javascript" src="./assets/javascript/markerCluster.js"></script> 
-    <script type="text/javascript" src="./assets/javascript/addMarkers.js"></script>	
-    <script type="text/javascript" src="./assets/javascript/coinmap.js"></script>
-    <script type="text/javascript" src="./assets/javascript/btcMultiCurrencyAPIs.js"></script>    
-    <script type="text/javascript" src="./assets/javascript/accounting.js"></script>
-
+                        </div>
+                        <!-- panel body-->
+                    </div>
+                    <!-- merchant container -->
+                </div>
+                <!-- row -->
+            </div>
+            <!-- BTC exchange rate  and merchant div-->
+        </div>
+        <!-- Main container -->
+        <footer class="navbar navbar-default navbar-fixed-bottom">
+            <ul class="nav nav-pills">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">BookMark</a></li>
+                <li role="presentation"><a href="#">Exchange Rate</a></li>
+                <!-- <li role="presentation"><a href="#">Categories</a></li> -->
+            </ul>
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJOOsdONx5bR-8ZnXqH5HZ-EQ8GG1n3Ro"></script>
+        <script type="text/javascript" src="./assets/javascript/userLocation.js"></script>
+        <script type="text/javascript" src="./assets/javascript/markerCluster.js"></script>
+        <script type="text/javascript" src="./assets/javascript/addMarkers.js"></script>
+        <script type="text/javascript" src="./assets/javascript/coinmap.js"></script>
+        <script type="text/javascript" src="./assets/javascript/btcMultiCurrencyAPIs.js"></script>
+        <script type="text/javascript" src="./assets/javascript/accounting.js"></script>
 </body>
+
 </html>
