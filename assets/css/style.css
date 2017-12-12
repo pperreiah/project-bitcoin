@@ -1,9 +1,3 @@
-.panel {
-    background: black;
-    color: orange;
-    text-align: center;
-  border: none;
-}  
 h1{
   opacity: 1.0;
   color: gold;
@@ -15,7 +9,12 @@ header{
    height: 200px;
 }
 
-
+.panel {
+  border: none;
+      background: black;
+    color: orange;
+    text-align: center;
+}
 
 #map-canvas {
     height: 400px;
@@ -84,13 +83,12 @@ a {
 }
 
 #merchants-container {
-
-  margin-left: 1px;
-  margin-top: 20px;
-  border: solid darkorange 1px;
-  background: black;
-  color: darkorange;
-  border-radius: 5px;
+    margin-left: 1px;
+    margin-top: 20px;
+    border: solid darkorange 1px;
+    background: black;
+    color: darkorange;
+    border-radius: 5px;
   opacity: 0.8;
 }
 
