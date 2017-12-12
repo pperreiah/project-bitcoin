@@ -1,4 +1,4 @@
-// $(document).ready(function () {
+$(document).ready(function () {
 
     // if ( $(window).width() > 768) {      
     //     //Add your javascript for large screens here 
@@ -27,4 +27,4 @@
         });
       }
 
-// });
+});
