@@ -20,34 +20,36 @@
       var markers = [];
       var categories = [];
 
+
       for (var i = 0; i < results.length; i++) {
-        console.log(results[i]);
+        // console.log(results[i]);
         var lat = results[i].lat;
         var lng = results[i].lon;
         var name = results[i].name;
-        var category = results[i].category; 
-    
-        var merchantInfo = results[i].category + " - " + results[i].name + "<br />";
+        var category = ""
 
-        if (!categories.includes(results[i].category)) {
-           categories.push(results[i].category)};
+        if(results[i].category==="default") {
+          category = "other";
+          results[i].category="other";
+          } else {
+            category = results[i].category;
+        }
 
-        $("#merchants-appear-here").append(merchantInfo);        
+        if (!categories.includes(category)) {
+           categories.push(category);
+         };      
+        
         addMarkers(lat, lng, name, category);
-       }
+      }; //for loop for adding markers
+      
       for (var i = 0; i < categories.length; i++) {
-      console.log(categories[i]);
-    }
-      for (var i = 0; i < categories.length; i++) {
-          for (var i = 0; i < results.length; i++) {
-            var name = results[i].name;
-            var category = results[i].category;    
-            var merchantInfo = results[i].category + " - " + results[i].name + "<br />";       
-            if (results[i].category === categories[i]) {
-              $("#merchants-appear-here").append(merchantInfo);       
-            }
-          } //for merchant info
-       } //for categories     
+          for (var j = 0; j < results.length; j++) {
+            if(categories[i]===results[j].category) {
+              var merchantInfo = categories[i] + " - " + results[j].name + "<br />";       
+              $("#merchants-appear-here").prepend(merchantInfo);  
+            };
+          } //for merchant info 
+      } //for categories     
 
     });
 

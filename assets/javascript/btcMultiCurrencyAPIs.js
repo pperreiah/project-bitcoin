@@ -45,19 +45,15 @@ $(document).ready(function() {
         //Renaming price converter button label                
         var convertButtonLabel = "Convert a " + isoSymbol + " price to BTC";
         document.getElementById("convert-price").value = convertButtonLabel;
-console.log(convertButtonLabel)//gets to here
-console.log(queryURL)
+
         // Performing an AJAX request with the queryURL
         $.ajax({
             url: queryURL,
             method: "GET"
         }).done( function( btcPriceJSON ) {
-
-console.log("done with ajax query")  //does not yet run ajax query
             // storing the data from the AJAX request in the results variable
             bpiresults = JSON.parse(btcPriceJSON);
             resultsPriceStrg = bpiresults.bpi[isoSymbol].rate_float;
-console.log(bpiresults)
 
             //Based on currency selected convert outPut price
             switch (isoSymbol) {
