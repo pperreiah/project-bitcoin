@@ -1,0 +1,22 @@
+
+.top-bar{
+	background: black;
+}
+
+.menu-text{
+	color:gold;
+	background: black;
+}
+
+footer{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	background: black;
+}
+
+.navi{
+	color: gold;
+}
+
