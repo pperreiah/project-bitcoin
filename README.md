@@ -1,5 +1,5 @@
-# WeCoin
-
+# WeCoin  
+LIVE URL: https://pperreiah.github.io/project-bitcoin/
 ### Project description:
 
 Create an application that identifies merchants near the user or a selected location that accepts bitcoin.  Provide Yelp reviews for the selected merchants.
